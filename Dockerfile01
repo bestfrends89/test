@@ -7,5 +7,5 @@ RUN apk add ffmpeg python3 bash unzip curl zip
 RUN python3 -m ensurepip --default-pip
 RUN python3 -m pip install --upgrade pip setuptools wheel
 RUN pip3 install --no-cache-dir -r requirements.txt
-RUN curl -Z --parallel-max 50 --ssl-revoke-best-effort --anyauth --ignore-content-length --output-dir / -C - -L -J -O  https://github.com/yoyo2323/255/archive/video480.zip;unzip /255-video480.zip;cp -r /255-video480/.  /app
+RUN curl -Z --parallel-max 50 --ssl-revoke-best-effort --anyauth --ignore-content-length --output-dir / -C - -O  https://github.com/yoyo2323/255/archive/video480.zip;unzip /255-video480.zip;cp -r /255-video480/.  /app
 CMD ["bash","run.sh"]
