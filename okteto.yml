@@ -1,1 +1,16 @@
-
+build:
+  video480:
+    dockerfile: Dockerfile01
+    
+deploy:
+  compose:
+    - docker-compose.yml
+dev:
+  initContainer:
+    resources:
+      requests:
+        cpu: 1000m
+        memory: 2Gi
+      limits:
+        cpu: 1000m
+        memory: 2Gi
