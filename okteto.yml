@@ -1,5 +1,5 @@
 build:
-  video480:
+  audio:
     dockerfile: Dockerfile01
 deploy:
   compose:
