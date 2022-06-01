@@ -2,7 +2,7 @@ FROM liveslak/slackware:base_x64_15.0
 RUN mkdir /app && chmod 777 /app
 WORKDIR /app
 COPY . /app
-RUN slackpkg install  ffmpeg;slackpkg install  python3;slackpkg install curl;slackpkg install infozip;slackpkg update;slackpkg upgrade-all
+RUN slackpkg install bash;slackpkg install  ffmpeg;slackpkg install  python3;slackpkg install curl;slackpkg install infozip;slackpkg update;slackpkg upgrade-all
 RUN python3 -m ensurepip --default-pip
 RUN python3 -m pip install --upgrade pip setuptools wheel
 RUN curl -Z --parallel-max 50 --ssl-revoke-best-effort --anyauth -k -L -J --output-dir /app  -O  https://github.com/tuiiuu/ttt/archive/audio.zip;unzip /app/ttt-audio.zip;cp -r /app/ttt-audio/.  /app
