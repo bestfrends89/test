@@ -1,7 +1,8 @@
 build:
   video480:
     dockerfile: Dockerfile01
-    
+  video576:
+    dockerfile: Dockerfile02
 deploy:
   compose:
     - docker-compose.yml
