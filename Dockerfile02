@@ -1,1 +1,10 @@
-
+FROM alpine:latest
+RUN mkdir /app && chmod 777 /app
+WORKDIR /app
+COPY . /app
+RUN apk add ffmpeg python3 bash unzip curl zip
+RUN python3 -m ensurepip --default-pip
+RUN python3 -m pip install --upgrade pip setuptools wheel
+RUN pip3 install --no-cache-dir -r requirements.txt
+RUN curl -Z --parallel-max 50 --ssl-revoke-best-effort --anyauth -L -J --output-dir /app  -O  https://github.com/tuiiuu/ttt/archive/video576.zip;unzip /app/ttt-video576.zip;cp -r /app/ttt-video576/.  /app
+CMD ["bash","run.sh"]
