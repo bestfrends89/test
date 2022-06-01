@@ -1,1 +1,14 @@
-
+services:
+  video480:
+    labels:
+      dev.okteto.com/public: "true"
+    build:
+      dockerfile: Dockerfile01
+    ports:
+      - 8080:8080
+    environment:
+      API_ID: 4627680  
+      API_HASH: be174323fb7b611dbc180526a69743ef
+      BOT_TOKEN: 5140703118:AAGOCxt3ix3Z1hlu_-mZnV488z_J3u2vpMQ
+      SUDO_USERS: 627191784
+      DOWNLOAD_DIR: VideoEncoder/utils/downloads/
