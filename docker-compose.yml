@@ -9,6 +9,6 @@ services:
     environment:
       API_ID: 4627680  
       API_HASH: be174323fb7b611dbc180526a69743ef
-      BOT_TOKEN: 5140703118:AAGOCxt3ix3Z1hlu_-mZnV488z_J3u2vpMQ
+      BOT_TOKEN: 5170268091:AAHr8Rz_irtfXhGeBmnBOvtSjeUeX4M4uZI
       SUDO_USERS: 627191784
       DOWNLOAD_DIR: VideoEncoder/utils/downloads/
