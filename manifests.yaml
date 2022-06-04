@@ -21,3 +21,4 @@ spec:
         -
           name: "MESSAGE2"
           value: "kubernetes"
+    args: ["/bin/echo", " $(MESSAGE1)", " $(MESSAGE2)"]
