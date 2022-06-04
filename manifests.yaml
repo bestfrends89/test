@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: "hello-world"
   labels:
-  app: "helloApp"
+    name: "helloApp"
   
 spec:
   restartPolicy: Never
