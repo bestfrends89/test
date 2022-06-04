@@ -1,15 +1,18 @@
---- 
 apiVersion: v1
-app: hello-world
-kind: Service
-labels: ~
-metadata: ~
-name: http
-port: 80
-ports: 
-  - ~
-selector: ~
-spec: ~
-targetPort: http
-type: LoadBalancer
+kind: ReplicationController
+metadata:
+  name: hello-world
+spec:
+  replicas: 2
+  template:
+    metadata:
+      labels:
+        app: hello-world
 
+spec:
+  containers:
+  - image: tutum/hello-world
+    name: hello-world
+    ports:
+    - containerPort: 8080
+      name: http
