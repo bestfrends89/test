@@ -11,8 +11,8 @@ spec:
 
 spec:
   containers:
-  - image: tutum/hello-world
-    name: hello-world
-    ports:
-    - containerPort: 8080
-      name: http
+    - image: tutum/hello-world
+      name: hello-world
+      ports:
+        - containerPort: 8080
+          name: http
