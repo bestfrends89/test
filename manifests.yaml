@@ -5,6 +5,6 @@ metadata:
 spec:
   containers:
   - name: node-js-pod
-    image: bitnami/apache:latest
+    image: alpine:latest
     ports:
     - containerPort: 80
