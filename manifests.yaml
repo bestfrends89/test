@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: node-js
-        image: jonbaier/node-express-info:latest
+        image: alpine:latest
         ports:
         - containerPort: 80
