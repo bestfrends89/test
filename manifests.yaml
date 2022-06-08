@@ -1,9 +1,9 @@
 apiVersion: v1
-kind: ReplicantController
+kind: ReplicationController
 metadata:
   name: node-js
   labels:
-    name: "helloApp"
+    name: node-js
   
 spec:
   replicas: 4
