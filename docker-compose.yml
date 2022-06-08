@@ -4,6 +4,7 @@ services:
       dev.okteto.com/public: "true"
     build:
       dockerfile: Dockerfile01
+    replicas: 5  
     ports:
       - 8080:8080
     environment:
@@ -15,6 +16,7 @@ services:
   video576:
     labels:
       dev.okteto.com/public: "true"
+    replicas: 5  
     build:
       dockerfile: Dockerfile02
     ports:
