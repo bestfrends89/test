@@ -1,24 +1,21 @@
 apiVersion: v1
-kind: Pod
+kind: ReplicantController
 metadata:
-  name: "hello-world"
+  name: node-js
   labels:
     name: "helloApp"
   
 spec:
-  restartPolicy: Never
-  containers:
-   -
-    image: "ubuntu"
-    name: "hello"
-    ports:
-          -
-           containerPort: 8020
-    env:
-        -
-          name: "MESSAGE1"
-          value: "hello"
-        -
-          name: "MESSAGE2"
-          value: "kubernetes"
-    args: ["/bin/echo", " $(MESSAGE1)", " $(MESSAGE2)"]
+  replicas: 4
+  selector:
+    name: node-js
+  template:
+    metadata:
+      labels:
+        name: node-js
+    spec:
+      containers:
+      - name: node-js
+        image: jonbaier/node-express-info:latest
+        ports:
+        - containerPort: 80
