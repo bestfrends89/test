@@ -5,7 +5,7 @@ services:
     build:
       dockerfile: Dockerfile01
     deploy:
-      mode: global
+      mode: replicated
       replicas: 2  
     ports:
       - 8080:8080
@@ -19,7 +19,7 @@ services:
     labels:
       dev.okteto.com/public: "true"
     deploy:
-      mode: global
+      mode: replicated
       replicas: 2  
     build:
       dockerfile: Dockerfile02
