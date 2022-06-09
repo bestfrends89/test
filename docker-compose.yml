@@ -4,7 +4,7 @@ services:
       dev.okteto.com/public: "true"
     build:
       dockerfile: Dockerfile01
-    deploys:
+    deploy:
       mode: global
       replicas: 2  
     ports:
@@ -18,7 +18,7 @@ services:
   video576:
     labels:
       dev.okteto.com/public: "true"
-    deploys:
+    deploy:
       mode: global
       replicas: 2  
     build:
