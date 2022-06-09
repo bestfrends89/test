@@ -5,7 +5,7 @@ services:
     build:
       dockerfile: Dockerfile01
     deploy:
-      mode: replicated
+      mode: global
       replicas: 2  
     ports:
       - 8080:8080
