@@ -19,7 +19,7 @@ services:
     labels:
       dev.okteto.com/public: "true"
     deploy:
-      mode: replicated
+      mode: global
       replicas: 2  
     build:
       dockerfile: Dockerfile02
