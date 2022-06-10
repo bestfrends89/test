@@ -5,15 +5,22 @@ services:
     build:
       dockerfile: Dockerfile01
     deploy:
-      mode: global
-      replicas: 1  
+      mode: replicated
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+        delay: 5s
+        max_attempts: 100
+        window: 120s
     ports:
-      - 8080:8080   
+      - 8080:8080
+    restart: on-failure
+    restart: unless-stopped  
   video576:
     labels:
       dev.okteto.com/public: "true"
     deploy:
-      mode: global
+      mode: replicated
       replicas: 1 
     build:
       dockerfile: Dockerfile02
