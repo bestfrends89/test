@@ -6,21 +6,15 @@ services:
       dockerfile: Dockerfile01
     deploy:
       mode: global
-      replicas: 2  
+      replicas: 1  
     ports:
-      - 8080:8080
-    environment:
-      API_ID: 4627680  
-      API_HASH: be174323fb7b611dbc180526a69743ef
-      BOT_TOKEN: 5140703118:AAGOCxt3ix3Z1hlu_-mZnV488z_J3u2vpMQ
-      SUDO_USERS: 627191784
-      DOWNLOAD_DIR: VideoEncoder/utils/downloads/   
+      - 8080:8080   
   video576:
     labels:
       dev.okteto.com/public: "true"
     deploy:
       mode: global
-      replicas: 2  
+      replicas: 1 
     build:
       dockerfile: Dockerfile02
     ports:
