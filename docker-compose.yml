@@ -4,6 +4,7 @@ services:
       dev.okteto.com/public: "true"
     build:
       dockerfile: Dockerfile01
+    restart: on-failure  
     deploy:
       mode: replicated
       replicas: 1
