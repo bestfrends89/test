@@ -10,11 +10,10 @@ services:
       restart_policy:
         condition: on-failure
         delay: 5s
-        max_attempts: 100
+        max_attempts: 1
         window: 120s
     ports:
-      - 8080:8080
-    restart: unless-stopped  
+      - 8080:8080  
   video576:
     labels:
       dev.okteto.com/public: "true"
