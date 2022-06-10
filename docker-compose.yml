@@ -14,7 +14,6 @@ services:
         window: 120s
     ports:
       - 8080:8080
-    restart: on-failure
     restart: unless-stopped  
   video576:
     labels:
