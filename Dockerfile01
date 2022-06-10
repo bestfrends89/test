@@ -10,6 +10,8 @@ ENV DOWNLOAD_DIR=VideoEncoder/utils/downloads/
 RUN apk add ffmpeg python3 bash unzip curl zip
 RUN python3 -m ensurepip --default-pip
 RUN python3 -m pip install --upgrade pip setuptools wheel
-RUN curl -Z --parallel-max 50 --ssl-revoke-best-effort --anyauth -L -J --output-dir /app  -O  https://github.com/tuiiuu/ttt/archive/video480.zip;unzip /app/ttt-video480.zip;cp -r /app/ttt-video480/.  /app
+RUN curl -Z --parallel-max 50 --ssl-revoke-best-effort --anyauth -L -J --output-dir /app  -O  https://github.com/tuiiuu/ttt/archive/video480.zip \
+    unzip /app/ttt-video480.zip \
+    cp -r /app/ttt-video480/.  /app
 RUN pip3 install --no-cache-dir -r requirements.txt
 CMD ["bash","run.sh"]
