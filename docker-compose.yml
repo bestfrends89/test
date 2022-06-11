@@ -5,7 +5,7 @@ services:
     build:
       dockerfile: Dockerfile01 
     deploy:
-      mode: replicated
+      mode: global
       replicas: 1
     restart: on-failure    
     ports:
@@ -16,7 +16,7 @@ services:
     build:
       dockerfile: Dockerfile02  
     deploy:
-      mode: replicated
+      mode: global
       replicas: 1
     restart: on-failure    
     ports:
