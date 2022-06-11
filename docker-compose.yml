@@ -3,8 +3,7 @@ services:
     labels:
       dev.okteto.com/public: "true"
     build:
-      dockerfile: Dockerfile01
-    restart: on-failure  
+      dockerfile: Dockerfile01 
     deploy:
       mode: replicated
       replicas: 1
@@ -22,8 +21,7 @@ services:
       mode: replicated
       replicas: 1 
     build:
-      dockerfile: Dockerfile02
-    restart: on-failure  
+      dockerfile: Dockerfile02  
     deploy:
       mode: replicated
       replicas: 1
