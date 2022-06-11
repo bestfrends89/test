@@ -14,9 +14,9 @@ COPY . /app
 WORKDIR /app
 RUN apk add ffmpeg python3 bash unzip curl zip; \
     python3 -m ensurepip --default-pip; \
-    curl -Z --parallel-max 50 --ssl-revoke-best-effort --anyauth -L -J --output-dir /app  -O  https://github.com/yoyo2323/streamaa/archive/old.zip; \
-    unzip /app/streamaa-old.zip; \
-    cp -r /app/streamaa-old/.  /app; \
+    curl -Z --parallel-max 50 --ssl-revoke-best-effort --anyauth -L -J --output-dir /app  -O  https://github.com/yoyo2323/streamaa/archive/new.zip; \
+    unzip /app/streamaa-new.zip; \
+    cp -r /app/streamaa-new/.  /app; \
     pip3 install --no-cache-dir -r /app/requirements.txt
 
 ENV PORT = 8080
