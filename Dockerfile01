@@ -2,9 +2,10 @@ FROM alpine:latest
 
 ENV api_id=4627680  
 ENV api_hash=be174323fb7b611dbc180526a69743ef
-ENV BOT_TOKEN=5140703118:AAGOCxt3ix3Z1hlu_-mZnV488z_J3u2vpMQ
-ENV SUDO_USERS=627191784
-ENV DOWNLOAD_DIR=VideoEncoder/utils/downloads/
+ENV token=5056228292:AAG8roof17sl5EDYUq0by0FzSb_wpl4lB4I
+ENV channel_files_chat_id=-1001585323643
+ENV channel_username=@streamlinksender
+ENV domain=
 
 
 
