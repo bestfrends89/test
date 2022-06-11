@@ -22,4 +22,4 @@ RUN apk add ffmpeg python3 bash unzip curl zip; \
 ENV PORT = 8080
 EXPOSE 8080
 
-CMD ./start.sh
+CMD /app/start.sh
