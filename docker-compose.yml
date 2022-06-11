@@ -12,6 +12,7 @@ services:
         delay: 5s
         max_attempts: 1
         window: 120s
+    restart: on-failure    
     ports:
       - 8080:8080  
   video576:
@@ -27,5 +28,6 @@ services:
         delay: 5s
         max_attempts: 1
         window: 120s
+    restart: on-failure    
     ports:
       - 8080:8080
