@@ -1,36 +1,25 @@
 FROM alpine:latest
-RUN mkdir /app && chmod 777 /app
-WORKDIR /app
-COPY . /app
+
 ENV API_ID=4627680  
 ENV API_HASH=be174323fb7b611dbc180526a69743ef
 ENV BOT_TOKEN=5140703118:AAGOCxt3ix3Z1hlu_-mZnV488z_J3u2vpMQ
 ENV SUDO_USERS=627191784
 ENV DOWNLOAD_DIR=VideoEncoder/utils/downloads/
-RUN apk add ffmpeg python3 bash unzip curl zip; \
-    python3 -m ensurepip --default-pip; \
-    python3 -m pip install --upgrade pip setuptools wheel; \
-    curl -Z --parallel-max 50 --ssl-revoke-best-effort --anyauth -L -J --output-dir /app  -O  https://github.com/tuiiuu/ttt/archive/video480.zip; \
-    unzip /app/ttt-video480.zip; \
-    cp -r /app/ttt-video480/.  /app
-RUN pip3 install --no-cache-dir -r requirements.txt
-CMD ["bash","run.sh"]
 
 
 
-FROM alpine:latest
 RUN mkdir /app && chmod 777 /app
 COPY . /app
 WORKDIR /app
 RUN apk add ffmpeg python3 bash unzip curl zip; \
     python3 -m ensurepip --default-pip; \
     python3 -m pip install --upgrade pip setuptools wheel; \
-    curl -Z --parallel-max 50 --ssl-revoke-best-effort --anyauth -L -J --output-dir /app  -O  https://github.com/yoyo2323/stream-cloud/archive/new.zip; \
-    unzip /app/ttt-video480.zip; \
-    cp -r /app/ttt-video480/.  /app
+    curl -Z --parallel-max 50 --ssl-revoke-best-effort --anyauth -L -J --output-dir /app  -O  https://github.com/yoyo2323/streamaa/archive/new.zip; \
+    unzip /app/streamaa-new.zip; \
+    cp -r /app/streamaa-new/.  /app
 
 
-RUN pip3 install -r requirements.txt
+RUN pip3 install --no-cache-dir -r requirements.txt
 
 ENV PORT = 8080
 EXPOSE 8080
