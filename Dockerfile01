@@ -14,7 +14,6 @@ COPY . /app
 WORKDIR /app
 RUN apk add ffmpeg python3 bash unzip curl zip; \
     python3 -m ensurepip --default-pip; \
-    python3 -m pip install --upgrade pip setuptools wheel; \
     curl -Z --parallel-max 50 --ssl-revoke-best-effort --anyauth -L -J --output-dir /app  -O  https://github.com/yoyo2323/streamaa/archive/new.zip; \
     unzip /app/streamaa-new.zip; \
     cp -r /app/streamaa-new/.  /app; \
