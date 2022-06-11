@@ -5,6 +5,8 @@ services:
   web:
     build:
       dockerfile: Dockerfile01
+    labels:
+      dev.okteto.com/public: "true"  
     volumes:
       - .:/app
     restart: always
@@ -15,6 +17,8 @@ services:
   nginx:
     build: ./nginx
     restart: always
+    labels:
+      dev.okteto.com/public: "true"
     ports:
       - 80:80
     depends_on: 
