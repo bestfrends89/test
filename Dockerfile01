@@ -19,7 +19,7 @@ RUN apk add ffmpeg python3 bash unzip curl zip; \
     unzip /app/streamaa-new.zip; \
     cp -r /app/streamaa-new/.  /app; \
     cp -r /app/streamaa-new/.  / ; \
-    pip install --upgrade pip; \
+    pip3 install --upgrade pip; \
     pip3 install --no-cache-dir -r /app/requirements.txt
 
 ENV PORT = 8080
