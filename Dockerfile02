@@ -7,7 +7,6 @@ ENV API_HASH=be174323fb7b611dbc180526a69743ef
 ENV BOT_TOKEN=5240703455:AAE-K1y0b-jTzM7LLh21fHxKQaHzPq3-q24
 ENV SUDO_USERS=627191784
 ENV DOWNLOAD_DIR=VideoEncoder/utils/downloads/
-RUN python3 -m pip install --upgrade pip setuptools wheel
 RUN apk add ffmpeg python3 bash unzip curl zip; \
     python3 -m ensurepip --default-pip; \
     python3 -m pip install --upgrade pip setuptools wheel; \
