@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM alpine:3.16.0
 
 ENV api_id=4627680  
 ENV api_hash=be174323fb7b611dbc180526a69743ef
