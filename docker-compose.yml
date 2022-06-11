@@ -1,23 +1,20 @@
+version: "2"
+
 services:
-  video480:
-    labels:
-      dev.okteto.com/public: "true"
-    build:
-      dockerfile: Dockerfile01 
-    deploy:
-      mode: global
-      replicas: 1
-    restart: on-failure    
-    ports:
-      - 8080:8080  
-  video576:
-    labels:
-      dev.okteto.com/public: "true" 
-    build:
-      dockerfile: Dockerfile02  
-    deploy:
-      mode: global
-      replicas: 1
-    restart: on-failure    
+
+  web:
+    build: .
+    volumes:
+      - .:/app
+    restart: always
+    command: ./start.sh
     ports:
       - 8080:8080
+
+  nginx:
+    build: ./nginx
+    restart: always
+    ports:
+      - 80:80
+    depends_on: 
+      - web
