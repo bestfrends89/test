@@ -12,6 +12,7 @@ services:
           cpus: '4'
           memory: 6000M
     oom_kill_disable:
+    storage_opt:
     restart: on-failure    
     ports:
       - 8080:8080  
