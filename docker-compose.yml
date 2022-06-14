@@ -9,7 +9,7 @@ services:
       replicas: 1
       resources:
         reservations:
-          cpus: '4'
+          cpus: '0.2'
           memory: 6000M
     oom_kill_disable:
     storage_opt:
