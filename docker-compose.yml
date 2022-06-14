@@ -9,7 +9,7 @@ services:
       replicas: 1
       resources:
         reservations:
-          cpus: '1'
+          cpus: '4'
           memory: 6000M
     oom_kill_disable:
     restart: on-failure    
