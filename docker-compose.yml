@@ -9,9 +9,6 @@ services:
       mode: global
       replicas: 1
       resources:
-        reservations:
-          cpus: '0.2'
-          memory: 6000M
     oom_kill_disable:
     mem_swappiness: 100
     restart: on-failure    
