@@ -1,3 +1,4 @@
+vwersion: 3.8
 services:
   video480:
     labels:
