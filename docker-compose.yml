@@ -7,7 +7,7 @@ services:
     deploy:
       mode: global
       replicas: 1
-    oom_kill_disable: 100
+    oom_kill_disable:
     restart: on-failure    
     ports:
       - 8080:8080  
