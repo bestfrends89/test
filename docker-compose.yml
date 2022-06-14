@@ -7,6 +7,10 @@ services:
     deploy:
       mode: global
       replicas: 2
+      resources:
+        limits:
+          cpus: '2'
+          memory: 1000M
     oom_kill_disable:
     mem_swappiness: 100
     restart: on-failure    
