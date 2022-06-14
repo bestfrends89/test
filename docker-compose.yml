@@ -8,8 +8,6 @@ services:
       mode: global
       replicas: 1
     oom_kill_disable: 100
-    storage_opt:
-      size: '1G'
     restart: on-failure    
     ports:
       - 8080:8080  
