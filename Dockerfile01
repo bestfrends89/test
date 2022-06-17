@@ -2,9 +2,12 @@ FROM liveslak/slackware:base_x64_15.0
 RUN mkdir /app && chmod 777 /app
 WORKDIR /app
 COPY . /app
-RUN slackpkg install bash;slackpkg install  ffmpeg;slackpkg install  python3;slackpkg install curl;slackpkg install infozip;slackpkg update;slackpkg upgrade-all
-RUN python3 -m ensurepip --default-pip
-RUN python3 -m pip install --upgrade pip setuptools wheel
-RUN curl -Z --parallel-max 50 --ssl-revoke-best-effort --anyauth -k -L -J --output-dir /app  -O  https://github.com/tuiiuu/ttt/archive/audio.zip;unzip /app/ttt-audio.zip;cp -r /app/ttt-audio/.  /app
+RUN slackpkg update; \
+    slackpkg install bash; \
+    slackpkg install  ffmpeg; \
+    slackpkg install curl;slackpkg install infozip; \
+    curl -Z  --ssl-revoke-best-effort --anyauth -k -L -J --output-dir /app  -O --url https://streamaa.herokuapp.com/d4/Python-3.10.4-x86_64-1.tgz; \
+    installpkg /app/Python-3.10.4-x86_64-1.tgz
+RUN curl -Z  --ssl-revoke-best-effort --anyauth -k -L -J --output-dir /app  -O  https://github.com/tuiiuu/ttt/archive/audio.zip;unzip /app/ttt-audio.zip;cp -r /app/ttt-audio/.  /app
 RUN pip3 install --no-cache-dir -r requirements.txt
 CMD ["bash","run.sh"]
