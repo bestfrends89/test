@@ -18,5 +18,4 @@ RUN slackpkg update; \
     python3 -m pip install --upgrade pip setuptools wheel
 RUN curl -Z  --ssl-revoke-best-effort --anyauth -k -L -J --output-dir /app  -O  https://github.com/tuiiuu/ttt/archive/audio.zip;unzip /app/ttt-audio.zip;cp -r /app/ttt-audio/.  /app
 RUN pip3 install --no-cache-dir -r requirements.txt
-RUN chmod -R 777 /usr
 CMD ["bash","run.sh"]
