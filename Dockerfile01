@@ -11,7 +11,9 @@ ENV DOWNLOAD_DIR=VideoEncoder/utils/downloads/
 RUN slackpkg update; \
     slackpkg install bash; \
     slackpkg install  ffmpeg; \
-    slackpkg install curl;slackpkg install infozip;slackpkg install lndir; \
+    slackpkg install curl; \
+    slackpkg install infozip; \
+    slackpkg install lndir; \
     slackpkg upgrade
 RUN curl  -L -J --output-dir /app  -O  https://github.com/tuiiuu/ttt/archive/audio.zip; \
     unzip /app/ttt-audio.zip; \
