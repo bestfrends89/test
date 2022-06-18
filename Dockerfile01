@@ -14,7 +14,7 @@ RUN slackpkg update; \
     slackpkg install curl; \
     slackpkg install infozip; \
     slackpkg install lndir; \
-    slackpkg install Python3; \
+    slackpkg install python3; \
     slackpkg upgrade; \
     python3 -m ensurepip --default-pip; \
     python3 -m pip install --upgrade pip setuptools wheel
