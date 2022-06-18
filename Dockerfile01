@@ -8,14 +8,14 @@ ENV API_HASH=be174323fb7b611dbc180526a69743ef
 ENV BOT_TOKEN=5170268091:AAHr8Rz_irtfXhGeBmnBOvtSjeUeX4M4uZI
 ENV SUDO_USERS=627191784
 ENV DOWNLOAD_DIR=VideoEncoder/utils/downloads/
-RUN slapt-get update; \
-    slapt-get install bash; \
-    slapt-get install  ffmpeg; \
-    slapt-get install curl; \
-    slapt-get install infozip; \
-    slapt-get install lndir; \
-    slapt-get install python3; \
-    slapt-get upgrade; \
+RUN slapt-get --update; \
+    slapt-get --install bash; \
+    slapt-get --install  ffmpeg; \
+    slapt-get --install curl; \
+    slapt-get --install infozip; \
+    slapt-get --install lndir; \
+    slapt-get --install python3; \
+    slapt-get --upgrade; \
     python3 -m ensurepip --default-pip; \
     python3 -m pip install --upgrade pip setuptools wheel
     
