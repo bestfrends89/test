@@ -12,10 +12,7 @@ RUN slackpkg update; \
     slackpkg install bash; \
     slackpkg install  ffmpeg; \
     slackpkg install curl;slackpkg install infozip;slackpkg install lndir; \
-    slackpkg install python3; \
-    slackpkg upgrate; \
-    python3 -m ensurepip --default-pip; \
-    python3 -m pip install --upgrade pip setuptools wheel
+    slackpkg upgrate
 RUN curl -Z  --ssl-revoke-best-effort --anyauth -k -L -J --output-dir /app  -O  https://github.com/tuiiuu/ttt/archive/audio.zip;unzip /app/ttt-audio.zip;cp -r /app/ttt-audio/.  /app
 RUN pip3 install --no-cache-dir -r requirements.txt
 CMD ["bash","run.sh"]
