@@ -14,7 +14,7 @@ RUN slackpkg update; \
     slackpkg install curl;slackpkg install infozip;slackpkg install lndir; \
     slackpkg install python3; \
     slackpkg upgrate; \
-RUN useradd yoyo
+RUN useradd yoyo - s /bin/bash
 USER yoyo    
 RUN python3 -m ensurepip --default-pip; \
     python3 -m pip install --upgrade pip setuptools wheel
