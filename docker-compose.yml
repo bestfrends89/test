@@ -1,5 +1,5 @@
 services:
-  audio:
+  udemy:
     labels:
       dev.okteto.com/public: "true"
     build:
