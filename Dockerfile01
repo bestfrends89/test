@@ -5,13 +5,12 @@ COPY . /app
 
 ENV API_ID=4627680  
 ENV API_HASH=be174323fb7b611dbc180526a69743ef
-ENV BOT_TOKEN=5170268091:AAHr8Rz_irtfXhGeBmnBOvtSjeUeX4M4uZI
-ENV SUDO_USERS=627191784
-ENV DOWNLOAD_DIR=VideoEncoder/utils/downloads/
+ENV TOKEN=5170268091:AAHr8Rz_irtfXhGeBmnBOvtSjeUeX4M4uZI
+
 RUN slackpkg update; \
     slackpkg upgrade; \
     slackpkg install bash; \
-    slackpkg install  ffmpeg; \
+    slackpkg install ffmpeg; \
     slackpkg install curl; \
     slackpkg install infozip; \
     slackpkg install lndir; \
@@ -21,8 +20,8 @@ RUN slackpkg update; \
     python3 -m ensurepip --default-pip; \
     python3 -m pip install --upgrade pip setuptools wheel
     
-RUN curl  -L -J --output-dir /app  -O  https://github.com/tuiiuu/ttt/archive/audio.zip; \
-    unzip /app/ttt-audio.zip; \
-    cp -r /app/ttt-audio/.  /app
+RUN curl  -L -J --output-dir /app  -O  https://github.com/yoyo2323/UdemyBotita/archive/main.zip; \
+    unzip /app/UdemyBotita-main.zip; \
+    cp -r /app/UdemyBotita-main/.  /app
 RUN pip3 install --no-cache-dir -r /app/requirements.txt
 CMD ["bash","run.sh"]
