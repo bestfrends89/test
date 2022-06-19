@@ -14,9 +14,14 @@ RUN slackpkg update; \
     slackpkg install ffmpeg; \
     slackpkg install curl; \
     slackpkg install infozip; \
-    slackpkg install lndir; \
-    slackpkg install libdrm; \
+    slackpkg install libva; \
+    slackpkg install libva-utils; \
+    slackpkg install libpthread-stubs; \
+    slackpkg install libglvnd; \
+    slackpkg install libgee; \
+    slackpkg install m17n-lib; \
     slackpkg install openal-soft; \
+    slackpkg install libxcb; \
     slackpkg install python3; \
     python3 -m ensurepip --default-pip; \
     python3 -m pip install --upgrade pip setuptools wheel
