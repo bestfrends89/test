@@ -23,6 +23,8 @@ RUN slackpkg update; \
     slackpkg install openal-soft; \
     slackpkg install libxcb; \
     slackpkg install libdrm; \
+    slackpkg install libcdio; \
+    slackpkg install libcdio-paranoia; \
     slackpkg install python3; \
     python3 -m ensurepip --default-pip; \
     python3 -m pip install --upgrade pip setuptools wheel
