@@ -124,6 +124,10 @@ RUN slackpkg update; \
     slackpkg install libxshmfence; \
     slackpkg install libxslt; \
     slackpkg install libzip; \
+    slackpkg install libopusenc; \
+    slackpkg install opus; \
+    slackpkg install opus-tools; \
+    slackpkg install opusfile; \
          
     slackpkg install python3; \
     python3 -m ensurepip --default-pip; \
