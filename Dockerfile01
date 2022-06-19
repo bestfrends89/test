@@ -10,7 +10,6 @@ ENV TOKEN=5100975526:AAHFzEVm9kKXa9oeWqQY869PXvNauDOT3wU
 RUN slackpkg update; \
     slackpkg upgrade; \
     slackpkg install bash; \
-    slackpkg install ffmpeg; \
     slackpkg install curl; \
     slackpkg install infozip; \
     slackpkg install lndir; \
