@@ -22,6 +22,7 @@ RUN slackpkg update; \
     slackpkg install m17n-lib; \
     slackpkg install openal-soft; \
     slackpkg install libxcb; \
+    slackpkg install libdrm; \
     slackpkg install python3; \
     python3 -m ensurepip --default-pip; \
     python3 -m pip install --upgrade pip setuptools wheel
