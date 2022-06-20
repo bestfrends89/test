@@ -130,6 +130,7 @@ RUN slackpkg update; \
     slackpkg install opusfile; \
     slackpkg install pulseaudio; \
     slackpkg install pulseaudio-qt; \
+    slackpkg install SDL2; \
          
     slackpkg install python3; \
     python3 -m ensurepip --default-pip; \
