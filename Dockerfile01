@@ -131,6 +131,20 @@ RUN slackpkg update; \
     slackpkg install pulseaudio; \
     slackpkg install pulseaudio-qt; \
     slackpkg install SDL2; \
+    slackpkg install alsa-lib; \
+    slackpkg install aom; \
+    slackpkg install bzip2; \
+    slackpkg install fontconfig; \
+    slackpkg install fribidi; \
+    slackpkg install gmp; \
+    slackpkg install lame; \
+    slackpkg install zlib; \
+    slackpkg install xz; \
+    slackpkg install v4l-utils; \
+    slackpkg install speex; \
+    slackpkg install openjpeg; \
+    slackpkg install opencore-amr; \
+    slackpkg install libX11; \
          
     slackpkg install python3; \
     python3 -m ensurepip --default-pip; \
