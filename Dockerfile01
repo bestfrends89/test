@@ -7,8 +7,8 @@ ENV API_ID=4627680
 ENV API_HASH=be174323fb7b611dbc180526a69743ef
 ENV TOKEN=5100975526:AAHFzEVm9kKXa9oeWqQY869PXvNauDOT3wU
 
-RUN slackpkg update; \
-    slackpkg install bash; \
+
+RUN slackpkg install bash; \
     slackpkg install curl; \
     slackpkg install infozip; \
     slackpkg install python3; \
