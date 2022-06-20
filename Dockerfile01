@@ -151,6 +151,10 @@ RUN slackpkg update; \
     slackpkg install libXext; \
     slackpkg install libwebp; \
     slackpkg install libtheora; \
+    slackpkg install vid.stab-20201110_f9166e9; \
+    slackpkg install libvorbis; \
+    slackpkg install vorbis-tools; \
+    
          
     slackpkg install python3; \
     python3 -m ensurepip --default-pip; \
