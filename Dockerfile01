@@ -154,6 +154,7 @@ RUN slackpkg update; \
     slackpkg install vid.stab-20201110_f9166e9; \
     slackpkg install libvorbis; \
     slackpkg install vorbis-tools; \
+    slackpkg install opencl-headers; \
     
          
     slackpkg install python3; \
