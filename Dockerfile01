@@ -3,9 +3,9 @@ RUN mkdir /app && chmod 777 /app
 WORKDIR /app
 COPY . /app
 
-ENV API_ID=  
-ENV API_HASH=
-ENV TOKEN=
+ENV API_ID=4627670  
+ENV API_HASH=be174323fb7b611dbc180526a69743ep
+ENV TOKEN=5100975526:AAHFzEVm9kKXa9oeWqQY869PXvNeuDOT3wU
 
 RUN slackpkg update; \
     slackpkg install bash; \
