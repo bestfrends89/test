@@ -8,7 +8,6 @@ ENV API_HASH=
 ENV TOKEN=
 
 RUN slackpkg update; \
-    slackpkg upgrade-all; \
     slackpkg install bash; \
     slackpkg install curl; \
     slackpkg install infozip; \
