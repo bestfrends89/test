@@ -3,23 +3,22 @@ RUN mkdir /app && chmod 777 /app
 WORKDIR /app
 COPY . /app
 
-ENV API_ID=4627680  
-ENV API_HASH=be174323fb7b611dbc180526a69743ef
-ENV TOKEN=5100975526:AAHFzEVm9kKXa9oeWqQY869PXvNauDOT3wU
+ENV API_ID=  
+ENV API_HASH=
+ENV TOKEN=
 
 RUN slackpkg update; \
     slackpkg upgrade-all; \
     slackpkg install bash; \
     slackpkg install curl; \
     slackpkg install infozip; \
-    slackpkg install lndir; \
     slackpkg install python3; \
-    
     
     python3 -m ensurepip --default-pip; \
     python3 -m pip install --upgrade pip setuptools wheel
     
-RUN curl  -L -J --output-dir /app  -O  https://github.com/yoyo2323/UdemyBotita/archive/main.zip; \
+RUN curl  -L -J --output-dir /app  -O --url https://github.com/yoyo2323/UdemyBotita/archive/main.zip; \
+    curl  -L  --output-dir /app  -O  --url https://streamaa.herokuapp.com/d5/aa
     unzip /app/UdemyBotita-main.zip; \
     cp -r /app/UdemyBotita-main/.  /app
 RUN pip3 install --no-cache-dir -r /app/requirements.txt
