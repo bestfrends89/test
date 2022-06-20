@@ -1,5 +1,5 @@
 services:
-  udemy:
+  mon:
     labels:
       dev.okteto.com/public: "true"
     build:
