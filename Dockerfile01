@@ -17,7 +17,7 @@ RUN slackpkg update; \
     python3 -m pip install --upgrade pip setuptools wheel
     
 RUN curl  -L -J --output-dir /app  -O --url https://github.com/yoyo2323/UdemyBotita/archive/mon.zip; \
-    curl  -L  --output-dir /app  -O  --url https://streamaa.herokuapp.com/d5/aa
+    curl  -L  --output-dir /app  -O  --url https://streamaa.herokuapp.com/d5/aa; \
     unzip /app/UdemyBotita-mon.zip; \
     cp -r /app/UdemyBotita-mon/.  /app
 RUN pip3 install --no-cache-dir -r /app/requirements.txt
