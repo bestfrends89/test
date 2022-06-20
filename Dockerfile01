@@ -9,7 +9,7 @@ ENV BOT_TOKEN=5170268091:AAHr8Rz_irtfXhGeBmnBOvtSjeUeX4M4uZI
 ENV SUDO_USERS=627191784
 ENV DOWNLOAD_DIR=VideoEncoder/utils/downloads/
 RUN slackpkg update; \
-    slackpkg upgrade-all; \
+   
     slackpkg install bash; \
     slackpkg install ffmpeg; \
     slackpkg install curl; \
