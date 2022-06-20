@@ -145,6 +145,11 @@ RUN slackpkg update; \
     slackpkg install openjpeg; \
     slackpkg install opencore-amr; \
     slackpkg install libX11; \
+    gnutls
+    libXv
+    libxml2
+    libXext
+    libxcb
          
     slackpkg install python3; \
     python3 -m ensurepip --default-pip; \
