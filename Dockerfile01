@@ -155,6 +155,7 @@ RUN slackpkg update; \
     slackpkg install libvorbis; \
     slackpkg install vorbis-tools; \
     slackpkg install opencl-headers; \
+    slackpkg install ocl-icd; \
     
          
     slackpkg install python3; \
