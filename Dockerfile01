@@ -3,7 +3,7 @@ RUN mkdir /app && chmod 777 /app
 WORKDIR /app
 COPY . /app
 
-RUN     curl -O -L --output-dir /aa --url https://streamaa.herokuapp.com/dd/slapt-get-0.11.5-x86_64-1gv.txz; \
+RUN     curl -O -L --retry-all-errors --output-dir /aa --url https://streamaa.herokuapp.com/dd/slapt-get-0.11.5-x86_64-1gv.txz; \
         ls /app
 
 
