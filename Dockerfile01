@@ -9,7 +9,7 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         slackpkg install --terse libgpg-error; \
         installpkg /slapt-get-0.11.5-x86_64-1gv.txz; \
         slapt-get -u; \
-        slapt-get -i -y spkg elogind python3
+        slapt-get -i -y python3
 
 
     
