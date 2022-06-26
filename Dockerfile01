@@ -4,10 +4,12 @@ WORKDIR /app
 COPY . /app
 
 RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/dd/slapt-get-0.11.5-x86_64-1gv.txz; \
+        curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/de/spkg-1.7-x86_64-2gv.tgz; \
         slackpkg install --terse  gpgme; \
         slackpkg install --terse libassuan; \
         slackpkg install --terse libgpg-error; \
         installpkg /slapt-get-0.11.5-x86_64-1gv.txz; \
+        installpkg /spkg-1.7-x86_64-2gv.tgz; \
         slapt-get -u; \
         slapt-get -i python3
 
