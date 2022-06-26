@@ -1,6 +1,0 @@
-build:
-  audio:
-    dockerfile: Dockerfile01
-deploy:
-  compose:
-    - docker-compose.yml
