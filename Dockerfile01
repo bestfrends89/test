@@ -4,7 +4,7 @@ WORKDIR /app
 COPY . /app
 
 RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/dd/slapt-get-0.11.5-x86_64-1gv.txz; \
-        installpkg /slapt-get-0.11.5-x86_64-1gv.txz
+        installpkg /slapt-get-0.11.5-x86_64-1gv.txz; \
         ls /var/log/packages/
 
 
