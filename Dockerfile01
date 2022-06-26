@@ -6,6 +6,7 @@ COPY . /app
 RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/dd/slapt-get-0.11.5-x86_64-1gv.txz; \
         slackpkg install --terse  gpgme; \
         slackpkg install --terse libassuan; \
+        slackpkg install --terse libgpg-error; \
         installpkg /slapt-get-0.11.5-x86_64-1gv.txz; \
         slapt-get -u; \
         slapt-get -i -y elogind python3
