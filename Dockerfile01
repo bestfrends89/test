@@ -32,6 +32,8 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         slapt-get -i -y libsoup libssh libssh2 libtasn1 libtheora libtiff libtirpc libunistring libunwind libusb libusb-compat libusbmuxd; \
         slapt-get -i -y libva libvdpau libvdpau libvisual libvorbis libvpx libwebp; \
         slapt-get -i -y libwnck3 libxcb libxfce4ui libxfce4util libxkbcommon libxkbfile libxklavier libxml2 libxshmfence libxslt libzip; \
+        slapt-get -i -y llvm-stripped lmdb lsof lua lvm2 lxrandr lz4 lzip lzo mc ncurses ndctl hostname imlib2 inih gsm gsl faac faad2 freetype fribidi cracklib; \
+        slapt-get -i -y bridge-utils atkmm binutils-min brotli; \
        
        upgradepkg ffmpeg%/ffmepg-5-x86_64-1.tgz; \
         python3 -m ensurepip --default-pip; \
