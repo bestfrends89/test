@@ -10,14 +10,12 @@ ENV DOWNLOAD_DIR=VideoEncoder/utils/downloads/
 
 RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/dd/slapt-get-0.11.5-x86_64-1gv.txz; \
         curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/de/spkg-1.7-x86_64-2gv.tgz; \
-        curl -O -L --retry-all-errors --output-dir / --url  https://streamaa.herokuapp.com/df/ffmepg-5-x86_64-1.tgz; \
-        curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/e0/SVT-AV1-0.8.6x86_64-1.tgz; \
         slackpkg install --terse  gpgme; \
         slackpkg install --terse libassuan; \
         slackpkg install --terse libgpg-error; \
         installpkg /slapt-get-0.11.5-x86_64-1gv.txz; \
         installpkg /spkg-1.7-x86_64-2gv.tgz; \
-        installpkg /SVT-AV1-0.8.6x86_64-1.tgz; \
+        
         slapt-get -u; \
         slapt-get -i -y python3 elogind ffmpeg infozip x264 x265 aom libass libfdk-aac lame coreutils openjpeg v4l-utils xvidcore wavpack vorbis-tools twolame tar sharutils; \   
         slapt-get -i -y  libICE libSM libX libXScrnSaver libXau libXaw libXaw3d libXaw3dXft libXcomposite libXcursor libXdamage libXdmcp libXevie; \
@@ -35,7 +33,7 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         slapt-get -i -y llvm-stripped lmdb lsof lua lvm2 lxrandr lz4 lzip lzo mc ncurses ndctl hostname imlib2 inih gsm gsl faac faad2 freetype fribidi cracklib; \
         slapt-get -i -y bridge-utils atkmm binutils-min brotli; \
        
-       upgradepkg ffmpeg%/ffmepg-5-x86_64-1.tgz; \
+     
         python3 -m ensurepip --default-pip; \
         python3 -m pip install --upgrade pip setuptools wheel; \
         curl -L -J --output-dir /app  -O  https://github.com/tuiiuu/ttt/archive/video480.zip; \
