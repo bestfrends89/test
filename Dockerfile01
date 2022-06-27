@@ -1,4 +1,4 @@
-FROM rodrigonicola/slack-minimal:latest
+FROM liveslak/slackware:base_x64_15.0
 
 WORKDIR /app
 COPY . /app
