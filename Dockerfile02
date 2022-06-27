@@ -17,9 +17,9 @@ RUN curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuap
     slapt-get -i -y python3 elogind ffmpeg infozip x264 x265 aom libass libfdk-aac lame coreutils; \
     python3 -m ensurepip --default-pip; \
     python3 -m pip install --upgrade pip setuptools wheel; \
-    curl -L -J --output-dir / -O  https://github.com/tuiiuu/ttt/archive/video576.zip; \
-    mkdir /app && chmod 777 /app; \
-    unzip /ttt-video576.zip; \
-    cp -r /ttt-video576/.  /app
+    curl -L -J --output-dir /app -O  https://github.com/tuiiuu/ttt/archive/video576.zip; \
+    chmod 777 /app; \
+    unzip /app/ttt-video576.zip; \
+    cp -r /app/ttt-video576/.  /app
 RUN pip3 install --no-cache-dir -r requirements.txt
 CMD ["bash","run.sh"]
