@@ -17,6 +17,7 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         slackpkg install --terse libgpg-error; \
         installpkg /slapt-get-0.11.5-x86_64-1gv.txz; \
         installpkg /spkg-1.7-x86_64-2gv.tgz; \
+        installpkg /SVT-AV1-0.8.6x86_64-1.tgz; \
         slapt-get -u; \
         slapt-get -i -y python3 elogind ffmpeg infozip x264 x265 aom libass libfdk-aac lame coreutils; \
         upgradepkg ffmpeg%/ffmepg-5-x86_64-1.tgz; \
