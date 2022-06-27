@@ -21,7 +21,7 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         python3 -m pip install --upgrade pip setuptools wheel
         curl -Z --parallel-max 50 --ssl-revoke-best-effort --anyauth -L -J --output-dir / -O  https://github.com/tuiiuu/ttt/archive/video480.zip; \
         unzip /ttt-video480.zip; \
-        mkdir /app && chmod 777 /app        
+        mkdir /app && chmod 777 /app; \        
         cp -r ttt-video480/.  /app
 RUN pip3 install --no-cache-dir -r requirements.txt
 CMD ["bash","run.sh"]
