@@ -17,21 +17,7 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         installpkg /spkg-1.7-x86_64-2gv.tgz; \
         
         slapt-get -u; \
-        slapt-get -i -y python3 elogind ffmpeg infozip x264 x265 aom libass libfdk-aac lame coreutils openjpeg v4l-utils xvidcore wavpack vorbis-tools twolame tar sharutils; \   
-        slapt-get -i -y  libICE libSM libX libXScrnSaver libXau libXaw libXaw3d libXaw3dXft libXcomposite libXcursor libXdamage libXdmcp libXevie; \
-        slapt-get -i -y libXext libXfixes libXfont2 libXfontcache libXft libXi libXinerama libXmu libXp libXpm libXpresent libXrandr; \
-        slapt-get -i -y libXrender libXres libXt libXtst libXv libXvMC libXxf86dga libXxf86misc libXxf86vm libaio libao libarchive libass; \
-        slapt-get -i -y libassuan libasyncns libatasmart libblockdev libbluray libbytesize libcaca libcanberra libcap libcap-ng; \
-        slapt-get -i -y libcddb libcdio libcdio-paranoia libcue libdaemon libdmx libdrm libdvdnav libdvdread libedit libepoxy libevdev; \
-        slapt-get -i -y libevent libexif libffi libfontenc libgcrypt libglade libglvnd libgpg-error libgphoto2 libgtop libgudev; \
-        slapt-get -i -y libical libidn libidn2 libimobiledevice libjpeg-turbo libmad libmbim libmng libmnl libmp4v2 libmtp libndp; \
-        slapt-get -i -y  libnetfilter_conntrack libnfnetlink libnftnl libnih libnl3 libnma libnotify libnsl libogg libopusenc libpcap; \
-        slapt-get -i -y libpciaccess libplist libpng libproxy libpsl libpwquality libqmi libraw1394 librsvg libsamplerate libsecret libsigc++ libsndfile; \
-        slapt-get -i -y libsoup libssh libssh2 libtasn1 libtheora libtiff libtirpc libunistring libunwind libusb libusb-compat libusbmuxd; \
-        slapt-get -i -y libva libvdpau libvdpau libvisual libvorbis libvpx libwebp; \
-        slapt-get -i -y libwnck3 libxcb libxfce4ui libxfce4util libxkbcommon libxkbfile libxklavier libxml2 libxshmfence libxslt libzip; \
-        slapt-get -i -y llvm-stripped lmdb lsof lua lvm2 lxrandr lz4 lzip lzo mc ncurses ndctl hostname imlib2 inih gsm gsl faac faad2 freetype fribidi cracklib; \
-        slapt-get -i -y bridge-utils atkmm binutils-min brotli; \
+        slapt-get -i -y python3 elogind ffmpeg infozip x264 x265 aom libass libfdk-aac lame coreutils openjpeg v4l-utils xvidcore wavpack vorbis-tools twolame tar sharutils; \
        
      
         python3 -m ensurepip --default-pip; \
