@@ -29,6 +29,8 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         chmod 777 /app; \
         unzip /app/ttt-video480.zip; \
         ldconfig; \
+        slapt-get --reinstall x264; \
+        
         cp -r /app/ttt-video480/.  /app
 RUN pip3 install --no-cache-dir -r requirements.txt
 CMD ["bash","run.sh"]
