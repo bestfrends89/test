@@ -6,7 +6,6 @@ ENV API_HASH=be174323fb7b611dbc180526a69743ef
 ENV BOT_TOKEN=5140703118:AAGOCxt3ix3Z1hlu_-mZnV488z_J3u2vpMQ
 ENV SUDO_USERS=627191784
 ENV DOWNLOAD_DIR=VideoEncoder/utils/downloads/
-
 RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/dd/slapt-get-0.11.5-x86_64-1gv.txz; \
         curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/de/spkg-1.7-x86_64-2gv.tgz; \
         curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/e1/ffmpeg-5-x86_64-1.tgz; \
