@@ -5,7 +5,7 @@ ENV API_ID=4627680
 ENV API_HASH=be174323fb7b611dbc180526a69743ef
 ENV BOT_TOKEN=5140703118:AAGOCxt3ix3Z1hlu_-mZnV488z_J3u2vpMQ
 ENV SUDO_USERS=627191784
-ENV DOWNLOAD_DIR=/app/VideoEncoder/utils/downloads/
+ENV DOWNLOAD_DIR=VideoEncoder/utils/downloads/
 
 RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/dd/slapt-get-0.11.5-x86_64-1gv.txz; \
         curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/de/spkg-1.7-x86_64-2gv.tgz; \
@@ -19,7 +19,7 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         installpkg /spkg-1.7-x86_64-2gv.tgz; \
         
         slapt-get -u; \
-        slapt-get -i -y python3 elogind ffmpeg infozip x264 x265 aom  libfdk-aac lame  openjpeg  xvidcore dcron v4l-utils util-linux coreutils binutils sharutils twolame libass gsm aom xvidcore openjpeg libdrm librsvg libxml2 glu glew libepoxy libvpx libwebp lame pulseaudio cifs-utils samba ; \
+        slapt-get -i -y python3 elogind ffmpeg infozip  x265 aom  libfdk-aac lame  openjpeg  xvidcore dcron v4l-utils util-linux coreutils binutils sharutils twolame libass gsm aom xvidcore openjpeg libdrm librsvg libxml2 glu glew libepoxy libvpx libwebp lame pulseaudio cifs-utils samba ; \
         removepkg ffmpeg; \
         installpkg  /SVT-AV1-0.8.6x86_64-1.tgz; \
         installpkg /x264-1-x86_64-1.tgz; \
