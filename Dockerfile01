@@ -1,4 +1,4 @@
-FROM rodrigonicola/slack-minimal:latest
+FROM liveslak/slackware:base_x64_15.0
 WORKDIR /app
 COPY . /app
 ENV API_ID=4627680  
@@ -22,16 +22,16 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         slapt-get -i -y python3 elogind ffmpeg infozip x264 x265 aom  libfdk-aac lame  openjpeg  xvidcore dcron v4l-utils util-linux coreutils binutils sharutils twolame libass gsm aom xvidcore openjpeg libdrm librsvg libxml2 glu glew libepoxy libvpx libwebp lame pulseaudio cifs-utils samba ; \
         removepkg ffmpeg; \
         installpkg  /SVT-AV1-0.8.6x86_64-1.tgz; \
+        installpkg /x264-1-x86_64-1.tgz; \
         installpkg /ffmpeg-5-x86_64-1.tgz; \
+        
      
         python3 -m ensurepip --default-pip; \
         python3 -m pip install --upgrade pip setuptools wheel; \
         curl -L -J --output-dir /app  -O  https://github.com/tuiiuu/ttt/archive/video480.zip; \
         chmod 777 /app; \
         unzip /app/ttt-video480.zip; \
-        ldconfig; \
-        slapt-get --dist-upgrade; \
-        
+        ldconfig; \  
         cp -r /app/ttt-video480/.  /app
 RUN pip3 install --no-cache-dir -r requirements.txt
 CMD ["bash","run.sh"]
