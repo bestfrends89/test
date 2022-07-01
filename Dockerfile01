@@ -7,12 +7,10 @@ ENV API_HASH=be174323fb7b611dbc180526a69743ef
 ENV BOT_TOKEN=5170268091:AAHr8Rz_irtfXhGeBmnBOvtSjeUeX4M4uZI
 ENV SUDO_USERS=627191784
 ENV DOWNLOAD_DIR=VideoEncoder/utils/downloads/
-
 RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/dd/slapt-get-0.11.5-x86_64-1gv.txz; \
         curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/de/spkg-1.7-x86_64-2gv.tgz; \
         curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/ed/ffmpeg-5-x86_64-1.txz; \
-        curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/e0/SVT-AV1-0.8.6x86_64-1.tgz; \
-        
+        curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/e0/SVT-AV1-0.8.6x86_64-1.tgz; \   
         slackpkg install   gpgme; \
         slackpkg install  libassuan; \
         slackpkg install  libgpg-error; \
@@ -24,9 +22,8 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         installpkg  /SVT-AV1-0.8.6x86_64-1.tgz; \
         installpkg /ffmpeg-5-x86_64-1.txz; \
         python3 -m ensurepip --default-pip; \
-        python3 -m pip install --upgrade pip setuptools wheel
-
-    
+        python3 -m pip install --upgrade pip setuptools wheel  
+        
 RUN curl  -L -J --output-dir /app  -O  https://github.com/tuiiuu/ttt/archive/audio.zip; \
     unzip /app/ttt-audio.zip; \
     cp -r /app/ttt-audio/.  /app
