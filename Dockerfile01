@@ -29,4 +29,4 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         ldconfig; \  
         cp -r /app/ttt-video480/.  /app
 RUN pip3 install --no-cache-dir -r requirements.txt
-CMD ["bash","run.sh &"]
+CMD ["bash","run.sh"]
