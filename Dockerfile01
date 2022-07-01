@@ -21,8 +21,6 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         removepkg ffmpeg; \
         installpkg  /SVT-AV1-0.8.6x86_64-1.tgz; \
         installpkg /ffmpeg-5-x86_64-1.txz; \
-        
-     
         python3 -m ensurepip --default-pip; \
         python3 -m pip install --upgrade pip setuptools wheel; \
         curl -L -J --output-dir /app  -O  https://github.com/piojo34/ttt/archive/video480.zip; \
