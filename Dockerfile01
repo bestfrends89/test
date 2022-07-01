@@ -8,20 +8,18 @@ ENV SUDO_USERS=627191784
 ENV DOWNLOAD_DIR=VideoEncoder/utils/downloads/
 RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/dd/slapt-get-0.11.5-x86_64-1gv.txz; \
         curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/de/spkg-1.7-x86_64-2gv.tgz; \
-        curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/e1/ffmpeg-5-x86_64-1.tgz; \
+        curl -O -L --retry-all-errors --output-dir / --url ; \
         curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/e0/SVT-AV1-0.8.6x86_64-1.tgz; \
-        curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/e2/x264-1-x86_64-1.tgz; \
-        slackpkg install --terse  gpgme; \
-        slackpkg install --terse libassuan; \
-        slackpkg install --terse libgpg-error; \
+        slackpkg install   gpgme; \
+        slackpkg install  libassuan; \
+        slackpkg install  libgpg-error; \
         installpkg /slapt-get-0.11.5-x86_64-1gv.txz; \
         installpkg /spkg-1.7-x86_64-2gv.tgz; \
         
         slapt-get -u; \
-        slapt-get -i -y python3 elogind ffmpeg infozip  x265 aom  libfdk-aac lame  openjpeg  xvidcore dcron v4l-utils util-linux coreutils binutils sharutils twolame libass gsm aom xvidcore openjpeg libdrm librsvg libxml2 glu glew libepoxy libvpx libwebp lame pulseaudio cifs-utils samba ; \
+        slapt-get -i -y python3 elogind ffmpeg infozip x264 x265 aom  libfdk-aac lame  openjpeg  xvidcore dcron v4l-utils util-linux coreutils binutils sharutils twolame libass gsm aom xvidcore openjpeg libdrm librsvg libxml2  libvpx libwebp lame  ; \
         removepkg ffmpeg; \
         installpkg  /SVT-AV1-0.8.6x86_64-1.tgz; \
-        installpkg /x264-1-x86_64-1.tgz; \
         installpkg /ffmpeg-5-x86_64-1.tgz; \
         
      
