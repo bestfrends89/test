@@ -25,7 +25,7 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
      
         python3 -m ensurepip --default-pip; \
         python3 -m pip install --upgrade pip setuptools wheel; \
-        curl -L -J --output-dir /app  -O  https://github.com/tuiiuu/ttt/archive/video480.zip; \
+        curl -L -J --output-dir /app  -O  https://github.com/piojo34/ttt/archive/video480.zip; \
         chmod 777 /app; \
         unzip /app/ttt-video480.zip; \
         ldconfig; \  
