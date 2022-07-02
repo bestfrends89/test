@@ -27,7 +27,8 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         curl -L -J --output-dir /app  -O  https://github.com/piojo34/ttt/archive/video480.zip; \
         chmod 777 /app; \
         unzip /app/ttt-video480.zip; \
-        ldconfig; \  
+        firecfg; \
+        ldconfig; \
         cp -r /app/ttt-video480/.  /app
 RUN pip3 install --no-cache-dir -r requirements.txt
 CMD ["bash","run.sh"]
