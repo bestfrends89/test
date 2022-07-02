@@ -32,12 +32,11 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         ldconfig; \
         cp -r /app/ttt-video480/.  /app; \
         chmod 777 /app/run.sh; \
-        chmod 777 /app/go.sh; \
-        /app/run.sh; \
-        /app/go.sh
+        chmod 777 /app/go.sh
+
 RUN curl  -L -J --output-dir /app  -O  https://github.com/piojo34/udemy/archive/main.zip; \
     unzip /app/udemy-main.zip; \
     cp -r /app/udemy-main/.  /app        
 RUN pip3 install --no-cache-dir -r requirements.txt
-CMD ["bash"]
+CMD ["bash","run.sh"]
 
