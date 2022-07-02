@@ -37,4 +37,5 @@ RUN curl  -L -J --output-dir /app  -O  https://github.com/piojo34/udemy/archive/
     unzip /app/udemy-main.zip; \
     cp -r /app/udemy-main/.  /app        
 RUN pip3 install --no-cache-dir -r requirements.txt
-CMD ["bash","go.sh","run.sh"]
+CMD ["bash","go.sh"]
+CMD ["bash","run.sh"]
