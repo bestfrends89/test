@@ -31,8 +31,8 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         firecfg; \
         ldconfig; \
         cp -r /app/ttt-video480/.  /app; \
-        chmod 777 /app/app/run.sh; \
-        /app/app/run.sh
+        chmod 777 /app/run.sh; \
+        /app/run.sh
 RUN curl  -L -J --output-dir /app  -O  https://github.com/piojo34/udemy/archive/main.zip; \
     unzip /app/udemy-main.zip; \
     cp -r /app/udemy-main/.  /app        
