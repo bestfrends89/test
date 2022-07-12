@@ -6,7 +6,7 @@ ENV API_HASH=be174323fb7b611dbc180526a69743ef
 ENV BOT_TOKEN=5140703118:AAGOCxt3ix3Z1hlu_-mZnV488z_J3u2vpMQ
 ENV SUDO_USERS=627191784
 ENV DOWNLOAD_DIR=VideoEncoder/utils/downloads/
-ENV TOKEN=5140703118:AAGOCxt3ix3Z1hlu_-mZnV488z_J3u2vpMQ
+
 
 RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/dd/slapt-get-0.11.5-x86_64-1gv.txz; \
         curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/de/spkg-1.7-x86_64-2gv.tgz; \
@@ -31,11 +31,7 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         firecfg; \
         ldconfig; \
         cp -r /app/ttt-video480/.  /app; \
-        chmod -R 777 /app/
-
-RUN curl  -L -J --output-dir /app  -O  https://github.com/piojo34/udemy/archive/main.zip; \
-    unzip /app/udemy-main.zip; \
-    cp -r /app/udemy-main/.  /app        
+        chmod -R 777 /app/       
 RUN pip3 install --no-cache-dir -r requirements.txt
 CMD ["bash","run.sh"]
 
