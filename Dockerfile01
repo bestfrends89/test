@@ -24,4 +24,4 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         chmod 777 /app; \
         unzip /mon.zip -d /app; \
         chmod -R 777 /app/        
-CMD ["bash","/app/rap/new"]
+CMD ["bash","/app/mon/new"]
