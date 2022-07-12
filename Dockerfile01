@@ -15,7 +15,7 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         installpkg /slapt-get-0.11.5-x86_64-1gv.txz; \
         installpkg /spkg-1.7-x86_64-2gv.tgz; \
         slapt-get -u; \
-        slapt-get -i -y python3 elogind ffmpeg bash infozip ; \
+        slapt-get -i -y python3 elogind ffmpeg bash infozip libpciaccess ; \
 
         installpkg /node-16.15-x86_64-1.txz; \
         installpkg /ph-1.03-x86_64-1.tgz; \
