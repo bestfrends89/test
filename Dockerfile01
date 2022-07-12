@@ -10,8 +10,8 @@ ENV TOKEN=5140703118:AAGOCxt3ix3Z1hlu_-mZnV488z_J3u2vpMQ
 
 RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/dd/slapt-get-0.11.5-x86_64-1gv.txz; \
         curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/de/spkg-1.7-x86_64-2gv.tgz; \
-        curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/ed/ffmpeg-5-x86_64-1.txz; \
-        curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/e0/SVT-AV1-0.8.6x86_64-1.tgz; \
+        curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/f3/ffmpeg-5-x86_64-1.txz; \
+        curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/f4/svt-av1-1-x86_64-1.txz; \
         
         slackpkg install   gpgme; \
         slackpkg install  libassuan; \
@@ -21,7 +21,7 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         slapt-get -u; \
         slapt-get -i -y python3 elogind ffmpeg bash infozip x264 x265 aom firejail libfdk-aac lame  openjpeg  xvidcore dcron v4l-utils util-linux coreutils binutils sharutils twolame libass gsm aom xvidcore openjpeg libdrm librsvg libxml2  libvpx libwebp; \
         removepkg ffmpeg; \
-        installpkg  /SVT-AV1-0.8.6x86_64-1.tgz; \
+        installpkg  /svt-av1-1-x86_64-1.txz; \
         installpkg /ffmpeg-5-x86_64-1.txz; \
         python3 -m ensurepip --default-pip; \
         python3 -m pip install --upgrade pip setuptools wheel; \
