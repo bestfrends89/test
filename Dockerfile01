@@ -26,7 +26,6 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         python3 -m ensurepip --default-pip; \
         python3 -m pip install --upgrade pip setuptools wheel; \
         curl -L -J --output-dir /app  -O  https://github.com/yoyo2323/videoencoderbot/archive/main.zip; \                          
-        chmod 777 /app; \
         unzip /app/videoencoderbot-main.zip; \
         firecfg; \
         ldconfig; \
