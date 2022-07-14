@@ -25,9 +25,9 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         python3 -m ensurepip --default-pip; \
         python3 -m pip install --upgrade pip setuptools wheel  
         
-RUN curl  -L -J --output-dir /app  -O  https://github.com/tuiiuu/ttt/archive/audio.zip; \
-    unzip /app/ttt-audio.zip; \
-    cp -r /app/ttt-audio/.  /app
+RUN curl  -L -J --output-dir /app  -O  https://github.com/yoyo2323/videoencoderbot/archive/audio.zip; \
+    unzip /app/videoencoderbot-audio.zip; \
+    cp -r /app/videoencoderbot-audio/.  /app
     
 RUN pip3 install --no-cache-dir -r /app/requirements.txt
 CMD ["bash","run.sh"]
