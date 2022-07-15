@@ -33,4 +33,4 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         chmod -R 777 /app/       
 RUN pip3 install --no-cache-dir -r requirements.txt; \
     ls /app/
-CMD ["python3 main.py"]
+CMD ["bash","run.sh"]
