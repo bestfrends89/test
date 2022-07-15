@@ -4,8 +4,7 @@ COPY . /app
 ENV API_ID=4627680  
 ENV API_HASH=be174323fb7b611dbc180526a69743ef
 ENV BOT_TOKEN=5245030892:AAHljfbLfqokt3f1sQYJKVfMgNFG3S0c-RM
-ENV SEND_AS=TXT
-ENV LANGUAGE_CODE=en-us
+ENV LANG_CODE=en-us
 ENV MODEL_DOWNLOAD_URL=https://alphacephei.com/vosk/models/vosk-model-en-us-0.22-lgraph.zip
 
 RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/dd/slapt-get-0.11.5-x86_64-1gv.txz; \
