@@ -25,11 +25,11 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         installpkg /ffmpeg-5-x86_64-1.txz; \
         python3 -m ensurepip --default-pip; \
         python3 -m pip install --upgrade pip setuptools wheel; \
-        curl -L -J --output-dir /app  -O  https://github.com/yoyo2323/Transcript/archive/main.zip; \                          
-        unzip /app/Transcript-main.zip; \
+        curl -L -J --output-dir /app  -O  https://github.com/yoyo2323/Speech2Sub/archive/vosk.zip; \                          
+        unzip /app/Speech2Sub-vosk.zip; \
         firecfg; \
         ldconfig; \
-        cp -r /app/Transcript-main/.  /app; \
+        cp -r /app/Speech2Sub-vosk/.  /app; \
         chmod -R 777 /app/       
 RUN pip3 install --no-cache-dir -r requirements.txt; \
     ls /app/
