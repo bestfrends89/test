@@ -25,11 +25,11 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         installpkg /ffmpeg-5-x86_64-1.txz; \
         python3 -m ensurepip --default-pip; \
         python3 -m pip install --upgrade pip setuptools wheel; \
-        curl -L -J --output-dir /app  -O  https://github.com/yoyo2323/videoencoderbot/archive/main.zip; \                          
-        unzip /app/videoencoderbot-main.zip; \
+        curl -L -J --output-dir /app  -O  https://github.com/yoyo2323/x265Encoder/archive/main.zip; \                          
+        unzip /app/x265Encodert-main.zip; \
         firecfg; \
         ldconfig; \
-        cp -r /app/videoencoderbot-main/.  /app; \
+        cp -r /app/x265Encoder-main/.  /app; \
         chmod -R 777 /app/       
 RUN pip3 install --no-cache-dir -r requirements.txt
 CMD ["bash","run.sh"]
