@@ -27,7 +27,7 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         python3 -m ensurepip --default-pip; \
         python3 -m pip install --upgrade pip setuptools wheel; \
         curl -L -J --output-dir /app  -O  https://github.com/yoyo2323/x265Encoder/archive/main.zip; \                          
-        unzip /app/x265Encodert-main.zip; \
+        unzip /app/x265Encoder-main.zip; \
         firecfg; \
         ldconfig; \
         cp -r /app/x265Encoder-main/.  /app; \
