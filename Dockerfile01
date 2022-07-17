@@ -6,6 +6,7 @@ ENV API_HASH=be174323fb7b611dbc180526a69743ef
 ENV BOT_TOKEN=5140703118:AAGOCxt3ix3Z1hlu_-mZnV488z_J3u2vpMQ
 ENV SUDO_USERS=627191784
 ENV DOWNLOAD_DIR=VideoEncoder/utils/downloads/
+ENV MONGO_URL=mongodb+srv://yoyo:roten23@cluster1.i6evc.mongodb.net/cluster1?retryWrites=true&w=majority
 
 
 RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.herokuapp.com/dd/slapt-get-0.11.5-x86_64-1gv.txz; \
