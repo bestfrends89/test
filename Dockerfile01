@@ -31,7 +31,7 @@ RUN     curl -O -L --retry-all-errors --output-dir / --url https://streamaa.hero
         firecfg; \
         ldconfig; \
         cp -r /app/videoencoderbot-main/.  /app; \
-        chmod -R 777 /app/       
-RUN pip3 install --no-cache-dir -r requirements.txt
+        chmod -R 777 /app/; \
+        pip3 install --no-cache-dir -r /app/videoencoderbot-main/requirements.txt
 CMD ["bash","run.sh"]
 
