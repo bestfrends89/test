@@ -1,8 +1,0 @@
-services:
-  udemy:
-    labels:
-      dev.okteto.com/public: "true"
-    build:
-      dockerfile: Dockerfile01
-    ports:
-      - 8080:8080
