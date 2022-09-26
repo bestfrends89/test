@@ -5,4 +5,4 @@ COPY . /app
 RUN     slackpkg install --terse  gpgme; \
         slackpkg install --terse libassuan; \
         slackpkg install --terse libgpg-error
-CMD ["bash","echo"]
+CMD ["bash","echo hola"]
