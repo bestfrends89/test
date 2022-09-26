@@ -1,9 +1,11 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: kuard
+  creationTimestamp: null
+  labels:
+    run: test
 spec:
-  containers:
+  - image: test
     - image: liveslak/slackware:base_x64_15.0
       name: kuard
       command: ["echo"]
