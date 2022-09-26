@@ -3,7 +3,7 @@ kind: Pod
 metadata:
   name: kuard
   annotations:
-    dev.okteto.com/pubic: "true"
+    dev.okteto.com/private: "true"
 spec:
   containers:
     - image: gcr.io/kuar-demo/kuard-amd64:blue
