@@ -6,7 +6,7 @@ spec:
   containers:
     - image: liveslak/slackware:base_x64_15.0
       name: kuard
-      command: ["tail", "-f", "/dev/null"]
+      command: ["echo"]
       resources:
         requests:
           cpu: "500m"
