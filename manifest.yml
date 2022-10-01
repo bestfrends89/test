@@ -5,6 +5,17 @@ metadata:
 spec:
   containers:
   - name: hello-world
+    env:
+    - name: "API_ID"
+      value: "4627680"
+    - name: "API_HASH"
+      value: "be174323fb7b611dbc180526a69743ef"
+    - name: "BOT_TOKEN"
+      value: "5140703118:AAGOCxt3ix3Z1hlu_-mZnV488z_J3u2vpMQ"
+    - name: "SUDO_USERS"
+      value: "627191784"
+    - name: "DOWNLOAD_DIR"
+      value: "VideoEncoder/utils/downloads/"
     image: liveslak/slackware:base_x64_15.0
     command: ["echo"]
     args: ["hola desde pod"]
