@@ -6,5 +6,7 @@ spec:
   containers:
   - name: hello-world
     image: liveslak/slackware:base_x64_15.0
+    command: ["echo"]
+    args: ["hola desde pod"]
     ports:
     - containerPort: 8080
