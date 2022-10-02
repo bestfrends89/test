@@ -17,6 +17,7 @@ spec:
     - name: "DOWNLOAD_DIR"
       value: "VideoEncoder/utils/downloads/"
     image: liveslak/slackware:base_x64_15.0
-    command: ["echo pingaaaa"]
+    command: ["echo"]
+    args: ["hola"]
     ports:
     - containerPort: 8080
