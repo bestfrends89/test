@@ -1,5 +1,5 @@
 services:
-  video480:
+  video4:
     labels:
       dev.okteto.com/public: "true"
     build:
