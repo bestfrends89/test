@@ -8,7 +8,7 @@ ENV SUDO_USERS=627191784
 ENV DOWNLOAD_DIR=VideoEncoder/utils/downloads/
 ENV MONGO_URL=mongodb+srv://yoyo:roten23@cluster1.i6evc.mongodb.net/cluster1?retryWrites=true&w=majority
 RUN     apk update; \
-        apk add ffmpeg unzip python3; \ 
+        apk add ffmpeg unzip python3 bash curl; \ 
         python3 -m ensurepip --default-pip; \
         python3 -m pip install --upgrade pip setuptools wheel; \
         curl -L -J --output-dir /app  -O  https://github.com/yoyo2323/videoencoderbot/archive/main.zip; \                          
