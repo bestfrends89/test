@@ -11,10 +11,10 @@ RUN     apk update; \
         apk add ffmpeg unzip python3 bash curl; \ 
         python3 -m ensurepip --default-pip; \
         python3 -m pip install --upgrade pip setuptools wheel; \
-        curl -L -J --output-dir /app  -O  https://github.com/yoyo2323/videoencoderbot/archive/main.zip; \                          
-        unzip /app/videoencoderbot-main.zip; \
-        cp -r /app/videoencoderbot-main/.  /app; \
+        curl -L -J --output-dir /app  -O  https://github.com/yoyo2323/x265Encoder/archive/main.zip; \                          
+        unzip /app/x265Encoder-main.zip; \
+        cp -r /app/x265Encoder-main/.  /app; \
         chmod -R 777 /app/; \
-        pip3 install --no-cache-dir -r /app/videoencoderbot-main/requirements.txt
+        pip3 install --no-cache-dir -r /app/x265Encoder-main/requirements.txt
 CMD ["bash","run.sh"]
 
