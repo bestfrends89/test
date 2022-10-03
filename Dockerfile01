@@ -3,7 +3,6 @@ WORKDIR /app
 COPY . /app
 ENV ENV=ANYTHING
 ENV SESSION_NAME=AHCompressBot
-ENV FFMPEG=ffmpeg -c:v libx265 -crf 27.5 -sn -s 854x480  -c:a libopus -ab 48k -vbr 2 -ac 2 -level 3.1 '''{}''' -y
 ENV TG_BOT_TOKEN=5140703118:AAGOCxt3ix3Z1hlu_-mZnV488z_J3u2vpMQ
 ENV APP_ID=4627680
 ENV API_HASH=be174323fb7b611dbc180526a69743ef
