@@ -17,7 +17,9 @@ spec:
     - name: "DOWNLOAD_DIR"
       value: "VideoEncoder/utils/downloads/"
     image: alpine:3.16.2
-    command: ["echo"]
+    command: ["echo","apk update","apk add ffmpeg unzip python3 bash curl","curl -L -J --output-dir /app  -O  https://github.com/yoyo2323/videoencoderbot/archive/main.zip"]
     args: ["hola"]
     ports:
     - containerPort: 8080
+    
+    
