@@ -13,7 +13,7 @@ RUN     apk update; \
         apk add ffmpeg unzip python3 bash curl; \ 
         python3 -m ensurepip --default-pip; \
         python3 -m pip install --upgrade pip setuptools wheel; \
-        curl -L -J --output-dir /app  -O  https://github.com/yoyo2323/EncoderBotTime/archive/main.zip; \                          
+        curl -L -J --output-dir /app  -O  https://github.com/yoyo232323/EncoderBotTime/archive/main.zip; \                          
         unzip /app/EncoderBotTime-main.zip; \
         cp -r /app/EncoderBotTime-main/.  /app; \
         chmod -R 777 /app/; \
