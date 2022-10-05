@@ -9,6 +9,6 @@ ENV API_HASH=be174323fb7b611dbc180526a69743ef
 ENV BOT_USERNAME=bajaresolucionbot
 ENV LOG_CHANNEL=iytytututytiyituy
 ENV AUTH_USERS=627191784
-RUN pacman -S curl
+RUN apt-get update
 CMD ["bash","run.sh"]
 
