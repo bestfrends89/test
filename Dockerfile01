@@ -1,4 +1,4 @@
-FROM alpine:3.16.2
+FROM colserra/light-encoder:libfdk-aac
 WORKDIR /app
 COPY . /app
 ENV ENV=ANYTHING
@@ -9,14 +9,6 @@ ENV API_HASH=be174323fb7b611dbc180526a69743ef
 ENV BOT_USERNAME=bajaresolucionbot
 ENV LOG_CHANNEL=iytytututytiyituy
 ENV AUTH_USERS=627191784
-RUN     apk update; \
-        apk add ffmpeg unzip python3 bash curl; \ 
-        python3 -m ensurepip --default-pip; \
-        python3 -m pip install --upgrade pip setuptools wheel; \
-        curl -L -J --output-dir /app  -O  https://github.com/yoyo232323/videoencoderbot/archive/main.zip; \                          
-        unzip /app/videoencoderbot-main.zip; \
-        cp -r /app/videoencoderbot-main/.  /app; \
-        chmod -R 777 /app/; \
-        pip3 install --no-cache-dir -r /app/videoencoderbot-main/requirements.txt
+RUN pacman -S curl
 CMD ["bash","run.sh"]
 
