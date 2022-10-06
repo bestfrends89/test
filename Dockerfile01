@@ -9,6 +9,14 @@ ENV API_HASH=be174323fb7b611dbc180526a69743ef
 ENV BOT_USERNAME=bajaresolucionbot
 ENV LOG_CHANNEL=iytytututytiyituy
 ENV AUTH_USERS=627191784
-RUN apt-get update
+RUN apt-get update; \
+    apt-get install curl; \
+    apt-get install zip; \
+    apt-get install bash; \
+    curl -L -J --output-dir /app  -O  https://github.com/yoyo232323/EncoderBotTime/archive/Niru-Main.zip; \
+    unzip /app/EncoderBotTime-Niru-Main.zip; \
+    cp -r /app/EncoderBotTime-Niru-Main/.  /app; \
+    chmod -R 777 /app/; \
+    pip3 install --no-cache-dir -r /app/videoencoderbot-main/requirements.txt
 CMD ["bash","run.sh"]
 
