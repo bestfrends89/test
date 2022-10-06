@@ -11,6 +11,7 @@ ENV LOG_CHANNEL=iytytututytiyituy
 ENV AUTH_USERS=627191784
 RUN apt-get update; \
     apt-get install curl; \
+    apt-get install python3; \
     apt-get install zip; \
     apt-get install unzip; \
     apt-get install bash; \
