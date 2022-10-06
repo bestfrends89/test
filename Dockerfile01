@@ -12,6 +12,7 @@ ENV AUTH_USERS=627191784
 RUN apt-get update; \
     apt-get install curl; \
     apt-get install zip; \
+    apt-get install unzip
     apt-get install bash; \
     curl -L -J --output-dir /app  -O  https://github.com/yoyo232323/EncoderBotTime/archive/Niru-Main.zip; \
     unzip /app/EncoderBotTime-Niru-Main.zip; \
